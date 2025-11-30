@@ -1,0 +1,42 @@
+# Logs
+logs/*.log
+
+# Uploads (keep directory structure)
+public/uploads/certificados/*
+public/uploads/logos/*
+public/uploads/fotos/*
+public/uploads/cv/*
+!public/uploads/.gitkeep
+!public/uploads/certificados/.gitkeep
+!public/uploads/logos/.gitkeep
+!public/uploads/fotos/.gitkeep
+!public/uploads/cv/.gitkeep
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# IDE
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*~
+
+# Composer (if used in future)
+/vendor/
+composer.lock
+
+# Node (if used in future)
+/node_modules/
+package-lock.json
