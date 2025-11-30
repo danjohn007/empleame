@@ -43,8 +43,17 @@ define('SESSION_LIFETIME', 3600); // 1 hora
 // Zona horaria
 date_default_timezone_set('America/Mexico_City');
 
-// Configuración de errores (desarrollo)
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
+// Modo de entorno (development | production)
+// En producción, cambiar a 'production' para ocultar credenciales de demo y errores detallados
+define('ENVIRONMENT', 'development');
+
+// Configuración de errores según entorno
+if (ENVIRONMENT === 'development') {
+    error_reporting(E_ALL);
+    ini_set('display_errors', 1);
+} else {
+    error_reporting(0);
+    ini_set('display_errors', 0);
+}
 ini_set('log_errors', 1);
 ini_set('error_log', LOGS_PATH . '/error.log');

@@ -252,7 +252,13 @@ INSERT INTO configuraciones (clave, valor, tipo, descripcion) VALUES
 ('api_qr_url', NULL, 'texto', 'URL de API para generar QR'),
 ('mantenimiento', '0', 'booleano', 'Modo mantenimiento');
 
--- Usuario admin (password: Admin123!)
+-- =====================================================
+-- DEMO DATA - FOR DEVELOPMENT/TESTING ONLY
+-- IMPORTANT: Change these passwords in production!
+-- Default password for all demo users: 'password'
+-- =====================================================
+
+-- Usuario admin
 INSERT INTO usuarios (email, password, tipo, activo, email_verificado) VALUES
 ('admin@alianzainclusiva.mx', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'admin', 1, 1);
 

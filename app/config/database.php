@@ -18,7 +18,12 @@ class Database {
             ];
             $this->connection = new PDO($dsn, DB_USER, DB_PASS, $options);
         } catch (PDOException $e) {
-            error_log("Error de conexión: " . $e->getMessage());
+            // Log error code only in production, full message in development
+            if (defined('ENVIRONMENT') && ENVIRONMENT === 'development') {
+                error_log("Error de conexión DB: " . $e->getMessage());
+            } else {
+                error_log("Error de conexión DB - Código: " . $e->getCode());
+            }
             throw new Exception("Error de conexión a la base de datos");
         }
     }

@@ -74,7 +74,8 @@ $pageTitle = 'Iniciar Sesión';
             </div>
         </div>
         
-        <!-- Demo credentials info -->
+        <?php if (defined('ENVIRONMENT') && ENVIRONMENT === 'development'): ?>
+        <!-- Demo credentials info - Only visible in development mode -->
         <div class="mt-6 bg-blue-50 border border-blue-200 rounded-lg p-4">
             <h4 class="font-semibold text-blue-800 mb-2"><i class="fas fa-info-circle mr-1"></i> Credenciales de demostración</h4>
             <div class="text-sm text-blue-700 space-y-1">
@@ -84,5 +85,6 @@ $pageTitle = 'Iniciar Sesión';
                 <p><strong>Contraseña:</strong> password (para todos)</p>
             </div>
         </div>
+        <?php endif; ?>
     </div>
 </div>

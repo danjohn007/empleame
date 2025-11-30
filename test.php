@@ -17,11 +17,12 @@ $checks = [];
 
 // 1. Verificar PHP Version
 $phpVersion = phpversion();
+$phpVersionOk = version_compare($phpVersion, '7.4', '>=');
 $checks['php'] = [
     'name' => 'Versión de PHP',
     'value' => $phpVersion,
-    'status' => version_compare($phpVersion, '7.4', '>='),
-    'message' => version_compare($phpVersion, '7.4', '>=') ? 'OK - PHP 7.4 o superior' : 'Se requiere PHP 7.4 o superior'
+    'status' => $phpVersionOk,
+    'message' => $phpVersionOk ? 'OK - PHP 7.4 o superior' : 'Se requiere PHP 7.4 o superior'
 ];
 
 // 2. Verificar extensiones necesarias
