@@ -11,9 +11,9 @@ if (!defined('BASE_PATH')) {
 
 // Configuración de Base de Datos
 define('DB_HOST', 'localhost');
-define('DB_NAME', 'empleame_db');
-define('DB_USER', 'root');
-define('DB_PASS', '');
+define('DB_NAME', 'empleame_sistema');
+define('DB_USER', 'empleame_sistema');
+define('DB_PASS', 'Danjohn007!');
 define('DB_CHARSET', 'utf8mb4');
 
 // Detectar URL Base automáticamente
